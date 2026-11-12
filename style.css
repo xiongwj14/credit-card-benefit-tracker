@@ -22,6 +22,7 @@ button.link { border:0; background:none; color:var(--muted); padding:0 4px; font
 .row input { width:18px; height:18px; }
 .row .name { flex:1; }
 .row.done .name { color:var(--muted); text-decoration:line-through; }
+.tag { font-style:normal; font-size:11px; color:var(--warn); border:1px solid var(--warn); border-radius:4px; padding:0 4px; margin-left:6px; }
 .amt { font-variant-numeric:tabular-nums; }
 .left { font-size:12px; color:var(--muted); min-width:64px; text-align:right; }
 .left.soon { color:var(--warn); font-weight:600; }
