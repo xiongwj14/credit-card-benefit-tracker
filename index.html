@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>信用卡 Benefit 追踪</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>信用卡 Benefit 追踪</h1>
+    <div class="actions">
+      <button id="notify-btn" class="ghost"></button>
+      <button id="add-btn">+ 添加卡片</button>
+    </div>
+  </header>
+  <main>
+    <section id="summary"></section>
+    <section id="cards"></section>
+  </main>
+  <dialog id="add-dialog">
+    <h2>选择你的卡片</h2>
+    <div id="add-list"></div>
+    <form method="dialog"><button class="ghost">关闭</button></form>
+  </dialog>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
