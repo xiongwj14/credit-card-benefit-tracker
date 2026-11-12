@@ -82,13 +82,13 @@
         return `<div class="group"><h3>${PERIOD_LABEL[p]}</h3>${rows.map((e) => `
           <label class="row ${e.used ? "done" : ""}">
             <input type="checkbox" data-uid="${esc(e.uid)}" ${e.used ? "checked" : ""}>
-            <span class="name">${esc(e.b.name)}</span>
+            <span class="name">${esc(e.b.name)}${e.b.enroll ? ' <em class="tag">需激活</em>' : ""}</span>
             <span class="amt">${e.amount ? money(e.amount) : "—"}</span>
             <span class="left ${!e.used && e.daysLeft <= 7 ? "soon" : ""}">${e.used ? "已完成" : `剩 ${e.daysLeft} 天`}</span>
           </label>`).join("")}</div>`;
       }).join("");
       const open = sc.openDate ? ` · 开卡日 ${sc.openDate}` : "";
-      return `<div class="card" style="--c:${card.color}">
+      return `<div class="card" style="--c:${card.color}" title="数据核实于 ${VERIFIED_ON}">
         <div class="card-head"><div><h2>${esc(card.name)}</h2><small>年费 ${money(card.fee)}${open}</small></div>
         <button class="link" data-remove="${card.id}">移除</button></div>${groups}</div>`;
     }).join("");
